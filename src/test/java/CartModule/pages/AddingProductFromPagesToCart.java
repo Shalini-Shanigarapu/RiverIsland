@@ -5,8 +5,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 
 import java.io.FileReader;
@@ -20,6 +22,7 @@ public class AddingProductFromPagesToCart {
     ActionsClass actionsClass;
     Cart cart;
 
+    JavascriptExecutor jse;
 
 
 
@@ -90,7 +93,8 @@ public class AddingProductFromPagesToCart {
 
 
 
-    public void addProductFromWomen() throws IOException, ParseException, InterruptedException
+
+    public void addProductFromWomen(String size) throws IOException, ParseException, InterruptedException
     {
         actionsClass = new ActionsClass(driver);
         acceptAll = driver.findElement(By.cssSelector("[name='accept-all']"));
@@ -116,11 +120,24 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
-        addToCartMethod("8");
+        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
+        sizeEle.click();
+
+        addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));
+        addToCart.click();
+
+        viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
+        viewBagEle.click();
+
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 
     public void signIn() throws IOException, ParseException, InterruptedException {
+
+        jse = (JavascriptExecutor)driver;
+
         accountEle = driver.findElement(By.linkText("Account"));
         accountEle.click();
 
@@ -141,10 +158,11 @@ public class AddingProductFromPagesToCart {
         passwordEle = driver.findElement(By.cssSelector("#password"));
         passwordEle.click();
         passwordEle.sendKeys(password);
-        Thread.sleep(20000);
+        Thread.sleep(10000);
 
-        signInBtnEle = driver.findElement(By.cssSelector("[type='submit']"));
-        signInBtnEle.click();
+        signInBtnEle = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        jse.executeScript("arguments[0].click();",signInBtnEle);
+//        signInBtnEle.click();
 
     }
 
@@ -153,6 +171,7 @@ public class AddingProductFromPagesToCart {
 
     public void addToCartMethod(String size)
     {
+
         sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/div/ul/li/span[text()='"+size+"']"));
         sizeEle.click();
 
@@ -170,7 +189,7 @@ public class AddingProductFromPagesToCart {
 
 
 
-    public void addProductFromMen() throws InterruptedException, IOException, ParseException
+    public void addProductFromMen(String size) throws InterruptedException, IOException, ParseException
     {
         actionsClass = new ActionsClass(driver);
         acceptAll = driver.findElement(By.cssSelector("[name='accept-all']"));
@@ -197,7 +216,18 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
-        addToCartMethod("S");
+        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
+        sizeEle.click();
+
+        addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));
+        addToCart.click();
+
+        viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
+        viewBagEle.click();
+
+
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 
@@ -219,7 +249,7 @@ public class AddingProductFromPagesToCart {
 
         allGirlsWearEle = driver.findElement(By.cssSelector("[data-promo-name='All Girlswear']"));
         actionsClass.scrollToElement(allGirlsWearEle);
-        Thread.sleep(10000);
+        Thread.sleep(5000);
         allGirlsWearEle.click();
 
         productsTopBar = driver.findElement(By.cssSelector("[data-qa='topBar']"));
@@ -233,8 +263,10 @@ public class AddingProductFromPagesToCart {
         selectSizeEle.click();
 
 
-        addToCartMethod("5-6 Yrs (UK)");
+        addToCartMethod("12-18 Mths (UK)");
 
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 
@@ -269,23 +301,14 @@ public class AddingProductFromPagesToCart {
         selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
         selectSizeEle.click();
 
+        addToCartMethod("3-6 Mths (UK)");
 
-        sizeEle= driver.findElement(By.xpath("//ul[@role='menu']/li/span[text()='3-6 Mths (UK)']"));
-        sizeEle.click();
-
-        addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));
-        addToCart.click();
-
-        viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
-        viewBagEle.click();
-
-        checkoutEle = driver.findElement(By.xpath("//div[@data-qa='totals']/../following-sibling::div/button"));
-        checkoutEle.click();
-
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 
-    public void addProductFromHolidayShop(String subCategory) throws IOException, ParseException, InterruptedException
+    public void addProductFromHolidayShop(String subCategory , String size) throws IOException, ParseException, InterruptedException
     {
         actionsClass = new ActionsClass(driver);
         acceptAll = driver.findElement(By.cssSelector("[name='accept-all']"));
@@ -294,12 +317,15 @@ public class AddingProductFromPagesToCart {
 
         signIn();
 
-        holidayShopEle = driver.findElement(By.linkText("holiday shop"));
+        holidayShopEle = driver.findElement(By.cssSelector("[data-menu-hierarchy='Holiday shop']"));
         holidayShopEle.click();
 
         WebElement element = driver.findElement(By.linkText(subCategory));
         element.click();
 
+        System.out.println(driver.getTitle());
+        String exceptedPageTitle = "Men's Holiday Shop | River Island";
+        Assert.assertEquals(exceptedPageTitle,driver.getTitle());
 
         productsTopBar = driver.findElement(By.cssSelector("[data-qa='topBar']"));
         actionsClass.scrollToElement(productsTopBar);
@@ -307,11 +333,17 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
+        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
+        sizeEle.click();
 
-        selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
-        selectSizeEle.click();
+        addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));
+        addToCart.click();
 
-        addToCartMethod("8");
+        viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
+        viewBagEle.click();
+
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 
@@ -342,7 +374,10 @@ public class AddingProductFromPagesToCart {
         selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
         selectSizeEle.click();
 
-        addToCartMethod("8");
+        addToCartMethod("32 short (UK)");
+
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
 
     }

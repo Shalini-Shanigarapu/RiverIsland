@@ -39,6 +39,8 @@ public class Cart {
     WebElement checkoutEle;
 
     WebElement totalPriceEle;
+
+    WebElement totalPriceAfterRemoveEle;
     WebElement expectedEle;
 
     WebElement  checkoutBtnEle; //h3[text()='Summary']/parent::div/div/following-sibling::div/following-sibling::div/button[text()='Checkout']
@@ -95,10 +97,10 @@ public class Cart {
 
         removeProduct();
 
-        totalPriceEle = driver.findElement(By.xpath("//span[text()='Total']/parent::p/following-sibling::p"));
-        String totalPriceAfter = totalPriceEle.getText();
+        totalPriceAfterRemoveEle = driver.findElement(By.xpath("//span[text()='Total']/parent::p/following-sibling::p"));
+        String totalPriceAfter = totalPriceAfterRemoveEle.getText();
 
-        System.out.println("Total Price After removing product" + totalPriceAfter);
+        Assert.assertTrue(totalPriceAfterRemoveEle.isDisplayed());
 
 
     }
@@ -118,7 +120,7 @@ public class Cart {
 
     public void checkoutPage() throws IOException, ParseException, InterruptedException {
         addingProductFromPagesToCart = new AddingProductFromPagesToCart(driver);
-        addingProductFromPagesToCart.addProductFromMen();
+        addingProductFromPagesToCart.addProductFromMen("S");
         checkoutEle = driver.findElement(By.xpath("//div[@data-qa='totals']/../following-sibling::div/button"));
         checkoutEle.click();
 

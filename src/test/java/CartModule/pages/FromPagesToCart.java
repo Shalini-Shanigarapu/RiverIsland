@@ -6,6 +6,7 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.io.IOException;
 
@@ -55,6 +56,9 @@ public class FromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
+
     }
 
 
@@ -72,6 +76,9 @@ public class FromPagesToCart {
 
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
+
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 
@@ -92,6 +99,9 @@ public class FromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
+
     }
 
 
@@ -110,6 +120,9 @@ public class FromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
+
     }
 
     public void boysPageToCart() throws IOException, ParseException, InterruptedException {
@@ -127,6 +140,9 @@ public class FromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
+
     }
 
 
@@ -136,7 +152,7 @@ public class FromPagesToCart {
 
         addingProductFromPagesToCart.signIn();
 
-        holidayShopEle = driver.findElement(By.linkText("holiday shop"));
+        holidayShopEle = driver.findElement(By.cssSelector("[data-menu-hierarchy='Holiday shop']"));
         holidayShopEle.click();
 
         WebElement element = driver.findElement(By.linkText(subCategory));
@@ -148,6 +164,8 @@ public class FromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
     }
 
 
@@ -157,7 +175,7 @@ public class FromPagesToCart {
 
         addingProductFromPagesToCart.signIn();
 
-        holidayShopEle = driver.findElement(By.linkText("holiday shop"));
+        holidayShopEle = driver.findElement(By.cssSelector("[data-menu-hierarchy='Jeans']"));
         holidayShopEle.click();
 
         WebElement element = driver.findElement(By.linkText(subCategory));
@@ -168,6 +186,9 @@ public class FromPagesToCart {
 
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
+
+        String exceptedTitle ="Cart";
+        Assert.assertEquals(exceptedTitle,driver.getTitle());
 
     }
 

@@ -19,6 +19,6 @@ public class AccurateDetailsTestCase extends BaseClass {
     }
     @Test
     public void accurateDetails() throws IOException, ParseException, InterruptedException {
-        accurateDetails.accurateDetailsMethod();
+        accurateDetails.accurateDetailsMethod("S");
     }
 }

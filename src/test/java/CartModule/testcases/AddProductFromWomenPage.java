@@ -24,7 +24,7 @@ public class AddProductFromWomenPage extends BaseClass {
     @Test
     public void addProductFromWomenPage() throws IOException, ParseException, InterruptedException {
 
-        addingProductFromPagesToCart.addProductFromWomen();
+        addingProductFromPagesToCart.addProductFromWomen("8");
 
     }
 }

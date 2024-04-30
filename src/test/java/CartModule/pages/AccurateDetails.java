@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -46,6 +47,9 @@ public class AccurateDetails
     WebElement bagEle;
     WebElement viewBagEle;
 
+    WebElement sizeEle;
+    WebElement addToCart;
+
 
     String productName ;
     String productPrice;
@@ -56,7 +60,7 @@ public class AccurateDetails
 
 
 
-    public void accurateDetailsMethod() throws InterruptedException, IOException, ParseException {
+    public void accurateDetailsMethod(String size) throws InterruptedException, IOException, ParseException {
         actionsClass = new ActionsClass(driver);
         acceptAll = driver.findElement(By.cssSelector("[name='accept-all']"));
         acceptAll.click();
@@ -108,7 +112,16 @@ public class AccurateDetails
         productPriceEle = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/parent::div/div/div/p/span"));
         productPrice = productPriceEle.getText();
         System.out.println("Product Price in Product Page : " + productPrice);
-        addingProductFromPagesToCart.addToCartMethod("S");
+
+
+        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
+        sizeEle.click();
+
+        addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));
+        addToCart.click();
+
+        viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
+        viewBagEle.click();
 
         System.out.println("******************************");
         productNameInCartEle = driver.findElement(By.xpath("//div[@data-qa='cart-item']/div/following-sibling::div/a/following-sibling::div/div/div/h3"));
@@ -116,11 +129,13 @@ public class AccurateDetails
         System.out.println("Product Name in cart Page : " + productNameInCart);
 
 
-
-
         productPriceInCartEle = driver.findElement(By.xpath("//div[@data-qa='cart-item']/div/following-sibling::div/a/following-sibling::div/div/div/following-sibling::div/p/span"));
         productPriceInCart = productPriceInCartEle.getText();
         System.out.println("Product Name in Cart Page : " + productPriceInCart);
+
+
+        Assert.assertEquals(productName,productNameInCart);
+        Assert.assertEquals(productPrice, productPriceInCart);
 
     }
 

@@ -33,18 +33,18 @@ public class TestCases extends BaseClass {
     }
 
 
+//
+//    @Test(priority = 1)
+//    public void addProductFromWomenPage() throws IOException, ParseException, InterruptedException {
+//        addingProductFromPagesToCart.addProductFromWomen();
+//
+//    }
 
-    @Test(priority = 1)
-    public void addProductFromWomenPage() throws IOException, ParseException, InterruptedException {
-        addingProductFromPagesToCart.addProductFromWomen();
 
-    }
-
-
-    @Test(priority = 2)
-    public void addProductFromMenPage() throws IOException, ParseException, InterruptedException {
-
-        addingProductFromPagesToCart.addProductFromMen();
+//    @Test(priority = 2)
+//    public void addProductFromMenPage() throws IOException, ParseException, InterruptedException {
+//
+//        addingProductFromPagesToCart.addProductFromMen();
 
     }
 
@@ -117,4 +117,4 @@ public class TestCases extends BaseClass {
 
 
 
-}
+//}

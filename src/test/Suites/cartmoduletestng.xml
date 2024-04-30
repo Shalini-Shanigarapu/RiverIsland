@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Rahul/Intellij/RiverIsland/src/test/java/CartModule/testcases">
+        <classes>
+            <class name="CartModule.testcases.AddProductFromWomenPage"></class>
+            <class name="CartModule.testcases.AddProductFromMenPage"></class>
+            <class name="CartModule.testcases.AddProductFromGirlsPage"></class>
+            <class name="CartModule.testcases.AddProductFromBoysPage"></class>
+            <class name="CartModule.testcases.AddProductFromHolidaysPage"></class>
+            <class name="CartModule.testcases.AddProductFromJeansPage"></class>
+            <class name="CartModule.testcases.AccurateDetailsTestCase"></class>
+            <class name="CartModule.testcases.HomepageToCart"></class>
+            <class name="CartModule.testcases.WomenPageToCart"></class>
+            <class name="CartModule.testcases.MenPageToCart"></class>
+            <class name="CartModule.testcases.GirlsPageToCart"></class>
+            <class name="CartModule.testcases.BoysPageToCart"></class>
+            <class name="CartModule.testcases.HolidayShopPageToCart"></class>
+            <class name="CartModule.testcases.JeansPageToCart"></class>
+            <class name="CartModule.testcases.IncreaseProductQuantity"></class>
+            <class name="CartModule.testcases.RemoveProductFromCart"></class>
+            <class name="CartModule.testcases.LogoutAndLogInTestCase"></class>
+            <class name="CartModule.testcases.CheckoutPage"></class>
+
+        </classes>
+    </test>
+</suite>

@@ -219,7 +219,7 @@ public class AddingProductFromPagesToCart {
 
         allGirlsWearEle = driver.findElement(By.cssSelector("[data-promo-name='All Girlswear']"));
         actionsClass.scrollToElement(allGirlsWearEle);
-        Thread.sleep(2000);
+        Thread.sleep(10000);
         allGirlsWearEle.click();
 
         productsTopBar = driver.findElement(By.cssSelector("[data-qa='topBar']"));

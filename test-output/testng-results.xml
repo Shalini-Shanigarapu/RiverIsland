@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-30T14:53:20 IST" name="All Test Suite" finished-at="2024-04-30T14:59:47 IST" duration-ms="386714">
+    <groups>
+    </groups>
+    <test started-at="2024-04-30T14:53:20 IST" name="C:/Shalini/SeleniumPractice/RiverIsland" finished-at="2024-04-30T14:59:47 IST" duration-ms="386714">
+      <class name="Tests.LoginwithValidCredentials">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginwithValidCredentials@48fa0f47]" started-at="2024-04-30T14:58:20 IST" name="setUp" finished-at="2024-04-30T14:58:24 IST" duration-ms="4105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginwithValidCredentials@48fa0f47]" started-at="2024-04-30T14:58:25 IST" name="login" data-provider="Email" finished-at="2024-04-30T14:59:18 IST" duration-ms="53012" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanigarapushalini1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Shalini@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginwithValidCredentials@48fa0f47]" started-at="2024-04-30T14:59:18 IST" name="tearDown" finished-at="2024-04-30T14:59:19 IST" duration-ms="604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.LoginwithValidCredentials -->
+      <class name="Tests.CreationWeakPassword">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreationWeakPassword@7c469c48]" started-at="2024-04-30T14:55:41 IST" name="setUp" finished-at="2024-04-30T14:55:45 IST" duration-ms="4425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="weakPassword()[pri:0, instance:Tests.CreationWeakPassword@7c469c48]" started-at="2024-04-30T14:55:45 IST" name="weakPassword" finished-at="2024-04-30T14:56:39 IST" duration-ms="54271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- weakPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.CreationWeakPassword@7c469c48]" started-at="2024-04-30T14:56:39 IST" name="tearDown" finished-at="2024-04-30T14:56:40 IST" duration-ms="612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.CreationWeakPassword -->
+      <class name="Tests.CreateAccountExistingMail">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateAccountExistingMail@71b1176b]" started-at="2024-04-30T14:53:20 IST" name="setUp" finished-at="2024-04-30T14:53:25 IST" duration-ms="4970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="existingEmail()[pri:0, instance:Tests.CreateAccountExistingMail@71b1176b]" started-at="2024-04-30T14:53:25 IST" name="existingEmail" finished-at="2024-04-30T14:53:48 IST" duration-ms="22459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- existingEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.CreateAccountExistingMail@71b1176b]" started-at="2024-04-30T14:53:48 IST" name="tearDown" finished-at="2024-04-30T14:53:48 IST" duration-ms="579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.CreateAccountExistingMail -->
+      <class name="Tests.ForgetPassword">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ForgetPassword@7ee955a8]" started-at="2024-04-30T14:56:40 IST" name="setUp" finished-at="2024-04-30T14:56:45 IST" duration-ms="4535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="forgetpwd()[pri:0, instance:Tests.ForgetPassword@7ee955a8]" started-at="2024-04-30T14:56:45 IST" name="forgetpwd" finished-at="2024-04-30T14:57:40 IST" duration-ms="55425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgetpwd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ForgetPassword@7ee955a8]" started-at="2024-04-30T14:57:40 IST" name="tearDown" finished-at="2024-04-30T14:57:41 IST" duration-ms="620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.ForgetPassword -->
+      <class name="Tests.CreateValidCredentials">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateValidCredentials@51e5fc98]" started-at="2024-04-30T14:54:15 IST" name="setUp" finished-at="2024-04-30T14:54:18 IST" duration-ms="2886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="CreateAccountValid()[pri:0, instance:Tests.CreateValidCredentials@51e5fc98]" started-at="2024-04-30T14:54:18 IST" name="CreateAccountValid" finished-at="2024-04-30T14:55:40 IST" duration-ms="82235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateAccountValid -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.CreateValidCredentials@51e5fc98]" started-at="2024-04-30T14:55:40 IST" name="tearDown" finished-at="2024-04-30T14:55:41 IST" duration-ms="599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.CreateValidCredentials -->
+      <class name="Tests.ValidEmailFormat">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.ValidEmailFormat@6ac13091]" started-at="2024-04-30T14:59:19 IST" name="setUp" finished-at="2024-04-30T14:59:23 IST" duration-ms="4676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkmailFormat()[pri:0, instance:Tests.ValidEmailFormat@6ac13091]" started-at="2024-04-30T14:59:23 IST" name="checkmailFormat" finished-at="2024-04-30T14:59:46 IST" duration-ms="23123" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkmailFormat -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.ValidEmailFormat@6ac13091]" started-at="2024-04-30T14:59:46 IST" name="tearDown" finished-at="2024-04-30T14:59:47 IST" duration-ms="453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.ValidEmailFormat -->
+      <class name="Tests.LoginInvalidPwd">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginInvalidPwd@1677d1]" started-at="2024-04-30T14:57:41 IST" name="setUp" finished-at="2024-04-30T14:57:45 IST" duration-ms="4659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="invalidPwd()[pri:0, instance:Tests.LoginInvalidPwd@1677d1]" started-at="2024-04-30T14:57:45 IST" name="invalidPwd" finished-at="2024-04-30T14:58:19 IST" duration-ms="34005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidPwd -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginInvalidPwd@1677d1]" started-at="2024-04-30T14:58:19 IST" name="tearDown" finished-at="2024-04-30T14:58:20 IST" duration-ms="614" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.LoginInvalidPwd -->
+      <class name="Tests.CreateAccountInvalidEmail">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.CreateAccountInvalidEmail@1ffe63b9]" started-at="2024-04-30T14:53:48 IST" name="setUp" finished-at="2024-04-30T14:53:53 IST" duration-ms="4415" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="InvalidEmail()[pri:0, instance:Tests.CreateAccountInvalidEmail@1ffe63b9]" started-at="2024-04-30T14:53:53 IST" name="InvalidEmail" finished-at="2024-04-30T14:54:14 IST" duration-ms="21833" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvalidEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.CreateAccountInvalidEmail@1ffe63b9]" started-at="2024-04-30T14:54:14 IST" name="tearDown" finished-at="2024-04-30T14:54:15 IST" duration-ms="501" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.CreateAccountInvalidEmail -->
+    </test> <!-- C:/Shalini/SeleniumPractice/RiverIsland -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

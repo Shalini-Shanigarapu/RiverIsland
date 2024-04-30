@@ -11,6 +11,7 @@ import java.time.Duration;
 
 public class BaseTest {
     protected WebDriver driver;
+
     @BeforeClass
     public void setUp() {
         driver = new ChromeDriver();
@@ -18,10 +19,12 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
         driver.get("https://www.riverisland.com/");
     }
-//    @AfterClass
-//    public void tearDown(){
-//        if(driver!=null){
-//            driver.quit();
-//        }
 
+    @AfterClass
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+
+    }
 }

@@ -1,15 +1,9 @@
-package Tests;
+package com.Createaccount.Tests;
 
-import POM.CreateAccountPage;
-import POM.HomePage;
-import POM.MyAccountPage;
-import POM.SignInPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.Createaccount.PageObjectModel.HomePage;
+import com.Createaccount.PageObjectModel.MyAccountPage;
+import com.Createaccount.PageObjectModel.SignInPage;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class CreateAccountExistingMail extends BaseTest{
 

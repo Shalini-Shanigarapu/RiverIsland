@@ -1,13 +1,8 @@
-package Tests;
+package com.Createaccount.Tests;
 
-import POM.HomePage;
-import POM.MyAccountPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
+import com.Createaccount.PageObjectModel.HomePage;
+import com.Createaccount.PageObjectModel.MyAccountPage;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 public class CreateAccountInvalidEmail extends BaseTest{
     @Test

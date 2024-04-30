@@ -1,11 +1,9 @@
-package POM;
+package com.Createaccount.PageObjectModel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
-import static POM.MyAccountPage.enterEmail;
 
 public class SignInPage {
     private WebDriver driver;

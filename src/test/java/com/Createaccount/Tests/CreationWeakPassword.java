@@ -1,8 +1,8 @@
-package Tests;
+package com.Createaccount.Tests;
 
-import POM.CreateAccountPage;
-import POM.HomePage;
-import POM.MyAccountPage;
+import com.Createaccount.PageObjectModel.CreateAccountPage;
+import com.Createaccount.PageObjectModel.HomePage;
+import com.Createaccount.PageObjectModel.MyAccountPage;
 import org.testng.annotations.Test;
 
 public class CreationWeakPassword extends BaseTest{

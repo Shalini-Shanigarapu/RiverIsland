@@ -1,4 +1,4 @@
-package POM;
+package com.Createaccount.PageObjectModel;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
@@ -28,7 +28,6 @@ public class CreateAccountPage {
 
     public void selectTitle() {
         WebElement title = driver.findElement(By.id(titleDD));
-        ;
         Select sel = new Select(title);
         sel.selectByVisibleText("Miss.");
 

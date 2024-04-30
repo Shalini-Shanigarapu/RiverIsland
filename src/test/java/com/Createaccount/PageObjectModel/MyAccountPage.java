@@ -1,4 +1,4 @@
-package POM;
+package com.Createaccount.PageObjectModel;
 
 import net.bytebuddy.utility.RandomString;
 import org.openqa.selenium.By;

@@ -1,9 +1,9 @@
-package Tests;
+package com.Createaccount.Tests;
 
-import POM.CreateAccountPage;
-import POM.HomePage;
-import POM.MyAccountPage;
-import POM.SignInPage;
+import com.Createaccount.PageObjectModel.CreateAccountPage;
+import com.Createaccount.PageObjectModel.HomePage;
+import com.Createaccount.PageObjectModel.MyAccountPage;
+import com.Createaccount.PageObjectModel.SignInPage;
 import org.testng.annotations.Test;
 
 public class LoginInvalidPwd extends BaseTest{
@@ -17,7 +17,7 @@ public class LoginInvalidPwd extends BaseTest{
         MyAccountPage myAccountPage = new MyAccountPage(driver);
         myAccountPage.loginmail();
         createAccountPage.enterweakPassword();
-        Thread.sleep(10000);
+        Thread.sleep(30000);
         signInPage.clickSignIn();
         signInPage.verifyinvalidPwderrorMsg();
 

@@ -1,9 +1,9 @@
-package Tests;
+package com.Createaccount.Tests;
 
-import POM.CreateAccountPage;
-import POM.HomePage;
-import POM.MyAccountPage;
-import POM.SignInPage;
+import com.Createaccount.PageObjectModel.CreateAccountPage;
+import com.Createaccount.PageObjectModel.HomePage;
+import com.Createaccount.PageObjectModel.MyAccountPage;
+import com.Createaccount.PageObjectModel.SignInPage;
 import org.testng.annotations.Test;
 
 public class ForgetPassword extends BaseTest {

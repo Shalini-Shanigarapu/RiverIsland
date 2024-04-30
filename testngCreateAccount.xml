@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Shalini/SeleniumPractice/RiverIsland">
+        <classes>
+            <class name="com.Createaccount.Tests.CreateAccountExistingMail">
+                <methods>
+                    <include name="existingEmail"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.CreateAccountInvalidEmail">
+                <methods>
+                    <include name="InvalidEmail"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.CreateValidCredentials">
+                <methods>
+                    <include name="CreateAccountValid"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.CreationWeakPassword">
+                <methods>
+                    <include name="weakPassword"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.ExcelTestData">
+                <methods>
+                    <include name="DataSuplier"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.ForgetPassword">
+                <methods>
+                    <include name="forgetpwd"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.LoginInvalidPwd">
+                <methods>
+                    <include name="invalidPwd"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.LoginwithValidCredentials">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+            <class name="com.Createaccount.Tests.ValidEmailFormat">
+                <methods>
+                    <include name="checkmailFormat"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

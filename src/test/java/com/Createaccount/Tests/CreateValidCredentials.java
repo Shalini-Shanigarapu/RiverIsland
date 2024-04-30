@@ -1,19 +1,10 @@
-package Tests;
+package com.Createaccount.Tests;
 
 
-import POM.CreateAccountPage;
-import POM.HomePage;
-import POM.MyAccountPage;
-import net.bytebuddy.utility.RandomString;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
+import com.Createaccount.PageObjectModel.CreateAccountPage;
+import com.Createaccount.PageObjectModel.HomePage;
+import com.Createaccount.PageObjectModel.MyAccountPage;
 import org.testng.annotations.Test;
-
-
-import java.time.Duration;
 
 
 public class CreateValidCredentials extends BaseTest{

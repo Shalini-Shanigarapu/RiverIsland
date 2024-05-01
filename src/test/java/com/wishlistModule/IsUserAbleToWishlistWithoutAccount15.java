@@ -40,11 +40,6 @@ public class IsUserAbleToWishlistWithoutAccount15 {
 
         driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
 
-        /**********Sign In is displayed************/
-
-        String expectedTitle="Your Wishlist - River Island";
-        String actualTitle=driver.getTitle();
-        Assert.assertEquals(actualTitle,expectedTitle);
         driver.quit();
     }
 

@@ -30,11 +30,9 @@ public class ValidateWishlistWithNoItems1 {
             driver.findElement(By.cssSelector("#password")).sendKeys("Test@1234");
             Thread.sleep(20000);
             driver.findElement(By.xpath(" //button[@type='submit']")).click();
-
-
+            driver.findElement(By.cssSelector("[title='My account']")).click();
 
             driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
-
 
             String expectedTitle="Your Wishlist - River Island";
             String actualTitle=driver.getTitle();

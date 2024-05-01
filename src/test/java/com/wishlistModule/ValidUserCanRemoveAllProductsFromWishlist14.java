@@ -25,20 +25,15 @@ public class ValidUserCanRemoveAllProductsFromWishlist14 {
 
         driver.findElement(By.cssSelector("[name='accept-all']")).click();
         driver.findElement(By.cssSelector("[title='My account']")).click();
-
-
         driver.findElement(By.cssSelector("[id='email']")).sendKeys("qatester1177@gmail.com");
         driver.findElement(By.cssSelector("[data-testid='email-login-button']")).click();
         driver.findElement(By.cssSelector("#password")).sendKeys("Test@1234");
         Thread.sleep(20000);
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
-
-
         driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
 
         driver.findElement(By.xpath("//button[@name='DeleteAllItemsFromWishlist']")).click();
-
 
         driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
 

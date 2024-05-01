@@ -33,7 +33,6 @@ public class ValidUserAccessWishlistFromAccount11 {
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
 
-
         driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
 
         driver.findElement(By.xpath("//button[@name='DeleteAllItemsFromWishlist']")).click();

@@ -114,7 +114,8 @@ public class AccurateDetails
         System.out.println("Product Price in Product Page : " + productPrice);
 
 
-        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
+        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::ul/li/following-sibling::li/div[text()='"+size+"']"));
+
         sizeEle.click();
 
         addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));

@@ -1,135 +1,405 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="18" passed="17" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-30T14:24:22 IST" name="All Test Suite" finished-at="2024-04-30T14:31:53 IST" duration-ms="450317">
+  <suite started-at="2024-05-01T01:55:14 IST" name="All Test Suite" finished-at="2024-05-01T02:07:08 IST" duration-ms="713919">
     <groups>
     </groups>
-    <test started-at="2024-04-30T14:24:22 IST" name="C:/Shalini/SeleniumPractice/RiverIsland" finished-at="2024-04-30T14:31:53 IST" duration-ms="450317">
-      <class name="com.Createaccount.Tests.LoginwithValidCredentials">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.LoginwithValidCredentials@4313f5bc]" started-at="2024-04-30T14:30:01 IST" name="setUp" finished-at="2024-04-30T14:30:04 IST" duration-ms="2915" status="PASS">
+    <test started-at="2024-05-01T01:55:14 IST" name="C:/Users/Rahul/Intellij/RiverIsland/src/test/java/CartModule/testcases" finished-at="2024-05-01T02:07:08 IST" duration-ms="713919">
+      <class name="CartModule.testcases.IncreaseProductQuantity">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.IncreaseProductQuantity@6af93788]" started-at="2024-05-01T02:02:39 IST" name="launchApplication" finished-at="2024-05-01T02:02:42 IST" duration-ms="2849" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:com.Createaccount.Tests.LoginwithValidCredentials@4313f5bc]" started-at="2024-04-30T14:30:05 IST" name="login" data-provider="Email" finished-at="2024-04-30T14:31:24 IST" duration-ms="78762" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[shanigarapushalini1@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Shalini@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="increaseProductQuantity()[pri:0, instance:CartModule.testcases.IncreaseProductQuantity@6af93788]" started-at="2024-05-01T02:02:42 IST" name="increaseProductQuantity" finished-at="2024-05-01T02:03:06 IST" duration-ms="24140" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.LoginwithValidCredentials@4313f5bc]" started-at="2024-04-30T14:31:24 IST" name="tearDown" finished-at="2024-04-30T14:31:24 IST" duration-ms="625" status="PASS">
+        </test-method> <!-- increaseProductQuantity -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.IncreaseProductQuantity@6af93788]" started-at="2024-05-01T02:02:42 IST" name="initialization" finished-at="2024-05-01T02:02:42 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.IncreaseProductQuantity@6af93788]" started-at="2024-05-01T02:03:06 IST" name="tearDown" finished-at="2024-05-01T02:03:07 IST" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.LoginwithValidCredentials -->
-      <class name="com.Createaccount.Tests.LoginInvalidPwd">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.LoginInvalidPwd@161479c6]" started-at="2024-04-30T14:29:00 IST" name="setUp" finished-at="2024-04-30T14:29:06 IST" duration-ms="6075" status="PASS">
+      </class> <!-- CartModule.testcases.IncreaseProductQuantity -->
+      <class name="CartModule.testcases.BoysPageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.BoysPageToCart@149e0f5d]" started-at="2024-05-01T02:01:01 IST" name="launchApplication" finished-at="2024-05-01T02:01:05 IST" duration-ms="3980" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="invalidPwd()[pri:0, instance:com.Createaccount.Tests.LoginInvalidPwd@161479c6]" started-at="2024-04-30T14:29:06 IST" name="invalidPwd" finished-at="2024-04-30T14:30:00 IST" duration-ms="54006" status="PASS">
+        </test-method> <!-- launchApplication -->
+        <test-method signature="boysPageToCart()[pri:0, instance:CartModule.testcases.BoysPageToCart@149e0f5d]" started-at="2024-05-01T02:01:05 IST" name="boysPageToCart" finished-at="2024-05-01T02:01:33 IST" duration-ms="27666" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.LoginInvalidPwd@161479c6]" started-at="2024-04-30T14:30:00 IST" name="tearDown" finished-at="2024-04-30T14:30:01 IST" duration-ms="614" status="PASS">
+        </test-method> <!-- boysPageToCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.BoysPageToCart@149e0f5d]" started-at="2024-05-01T02:01:05 IST" name="initialization" finished-at="2024-05-01T02:01:05 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.LoginInvalidPwd -->
-      <class name="com.Createaccount.Tests.CreateAccountExistingMail">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.CreateAccountExistingMail@1ffe63b9]" started-at="2024-04-30T14:24:23 IST" name="setUp" finished-at="2024-04-30T14:24:28 IST" duration-ms="5552" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="existingEmail()[pri:0, instance:com.Createaccount.Tests.CreateAccountExistingMail@1ffe63b9]" started-at="2024-04-30T14:24:28 IST" name="existingEmail" finished-at="2024-04-30T14:24:51 IST" duration-ms="22927" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- existingEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.CreateAccountExistingMail@1ffe63b9]" started-at="2024-04-30T14:24:51 IST" name="tearDown" finished-at="2024-04-30T14:24:52 IST" duration-ms="619" status="PASS">
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.BoysPageToCart@149e0f5d]" started-at="2024-05-01T02:01:33 IST" name="tearDown" finished-at="2024-05-01T02:01:33 IST" duration-ms="334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.CreateAccountExistingMail -->
-      <class name="com.Createaccount.Tests.CreateValidCredentials">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.CreateValidCredentials@6ac13091]" started-at="2024-04-30T14:25:18 IST" name="setUp" finished-at="2024-04-30T14:25:23 IST" duration-ms="4746" status="PASS">
+      </class> <!-- CartModule.testcases.BoysPageToCart -->
+      <class name="CartModule.testcases.LogoutAndLogInTestCase">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.LogoutAndLogInTestCase@7880cdf3]" started-at="2024-05-01T02:05:29 IST" name="launchApplication" finished-at="2024-05-01T02:05:32 IST" duration-ms="3083" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="CreateAccountValid()[pri:0, instance:com.Createaccount.Tests.CreateValidCredentials@6ac13091]" started-at="2024-04-30T14:25:23 IST" name="CreateAccountValid" finished-at="2024-04-30T14:26:59 IST" duration-ms="95805" status="PASS">
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.LogoutAndLogInTestCase@7880cdf3]" started-at="2024-05-01T02:05:32 IST" name="initialization" finished-at="2024-05-01T02:05:32 IST" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateAccountValid -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.CreateValidCredentials@6ac13091]" started-at="2024-04-30T14:26:59 IST" name="tearDown" finished-at="2024-04-30T14:27:00 IST" duration-ms="722" status="PASS">
+        </test-method> <!-- initialization -->
+        <test-method signature="logoutAndLogInMethod()[pri:0, instance:CartModule.testcases.LogoutAndLogInTestCase@7880cdf3]" started-at="2024-05-01T02:05:32 IST" name="logoutAndLogInMethod" finished-at="2024-05-01T02:06:29 IST" duration-ms="56605" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.CreateValidCredentials -->
-      <class name="com.Createaccount.Tests.ForgetPassword">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.ForgetPassword@75329a49]" started-at="2024-04-30T14:28:00 IST" name="setUp" finished-at="2024-04-30T14:28:04 IST" duration-ms="4324" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="forgetpwd()[pri:0, instance:com.Createaccount.Tests.ForgetPassword@75329a49]" started-at="2024-04-30T14:28:04 IST" name="forgetpwd" finished-at="2024-04-30T14:28:59 IST" duration-ms="55395" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgetpwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.ForgetPassword@75329a49]" started-at="2024-04-30T14:28:59 IST" name="tearDown" finished-at="2024-04-30T14:29:00 IST" duration-ms="668" status="PASS">
+        </test-method> <!-- logoutAndLogInMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.LogoutAndLogInTestCase@7880cdf3]" started-at="2024-05-01T02:06:29 IST" name="tearDown" finished-at="2024-05-01T02:06:29 IST" duration-ms="214" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.ForgetPassword -->
-      <class name="com.Createaccount.Tests.ValidEmailFormat">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.ValidEmailFormat@7f010382]" started-at="2024-04-30T14:31:24 IST" name="setUp" finished-at="2024-04-30T14:31:27 IST" duration-ms="2958" status="PASS">
+      </class> <!-- CartModule.testcases.LogoutAndLogInTestCase -->
+      <class name="CartModule.testcases.WomenPageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.WomenPageToCart@47d90b9e]" started-at="2024-05-01T01:59:38 IST" name="launchApplication" finished-at="2024-05-01T01:59:41 IST" duration-ms="2766" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="checkmailFormat()[pri:0, instance:com.Createaccount.Tests.ValidEmailFormat@7f010382]" started-at="2024-04-30T14:31:27 IST" name="checkmailFormat" finished-at="2024-04-30T14:31:52 IST" duration-ms="24977" status="PASS">
+        </test-method> <!-- launchApplication -->
+        <test-method signature="womenPageToCart()[pri:0, instance:CartModule.testcases.WomenPageToCart@47d90b9e]" started-at="2024-05-01T01:59:41 IST" name="womenPageToCart" finished-at="2024-05-01T02:00:05 IST" duration-ms="24548" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkmailFormat -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.ValidEmailFormat@7f010382]" started-at="2024-04-30T14:31:52 IST" name="tearDown" finished-at="2024-04-30T14:31:53 IST" duration-ms="496" status="PASS">
+        </test-method> <!-- womenPageToCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.WomenPageToCart@47d90b9e]" started-at="2024-05-01T01:59:41 IST" name="initialization" finished-at="2024-05-01T01:59:41 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.ValidEmailFormat -->
-      <class name="com.Createaccount.Tests.CreateAccountInvalidEmail">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.CreateAccountInvalidEmail@48fa0f47]" started-at="2024-04-30T14:24:52 IST" name="setUp" finished-at="2024-04-30T14:24:56 IST" duration-ms="4633" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="InvalidEmail()[pri:0, instance:com.Createaccount.Tests.CreateAccountInvalidEmail@48fa0f47]" started-at="2024-04-30T14:24:56 IST" name="InvalidEmail" finished-at="2024-04-30T14:25:18 IST" duration-ms="21578" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- InvalidEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.CreateAccountInvalidEmail@48fa0f47]" started-at="2024-04-30T14:25:18 IST" name="tearDown" finished-at="2024-04-30T14:25:18 IST" duration-ms="547" status="PASS">
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.WomenPageToCart@47d90b9e]" started-at="2024-05-01T02:00:05 IST" name="tearDown" finished-at="2024-05-01T02:00:06 IST" duration-ms="189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.CreateAccountInvalidEmail -->
-      <class name="com.Createaccount.Tests.CreationWeakPassword">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Createaccount.Tests.CreationWeakPassword@5e316c74]" started-at="2024-04-30T14:27:00 IST" name="setUp" finished-at="2024-04-30T14:27:04 IST" duration-ms="4788" status="PASS">
+      </class> <!-- CartModule.testcases.WomenPageToCart -->
+      <class name="CartModule.testcases.CheckoutPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.CheckoutPage@5be6e01c]" started-at="2024-05-01T02:06:29 IST" name="launchApplication" finished-at="2024-05-01T02:06:32 IST" duration-ms="2828" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="weakPassword()[pri:0, instance:com.Createaccount.Tests.CreationWeakPassword@5e316c74]" started-at="2024-04-30T14:27:04 IST" name="weakPassword" finished-at="2024-04-30T14:27:59 IST" duration-ms="54649" status="PASS">
+        </test-method> <!-- launchApplication -->
+        <test-method signature="checkoutPage()[pri:0, instance:CartModule.testcases.CheckoutPage@5be6e01c]" started-at="2024-05-01T02:06:32 IST" name="checkoutPage" finished-at="2024-05-01T02:07:07 IST" duration-ms="35520" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- weakPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Createaccount.Tests.CreationWeakPassword@5e316c74]" started-at="2024-04-30T14:27:59 IST" name="tearDown" finished-at="2024-04-30T14:28:00 IST" duration-ms="614" status="PASS">
+        </test-method> <!-- checkoutPage -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.CheckoutPage@5be6e01c]" started-at="2024-05-01T02:06:32 IST" name="initialization" finished-at="2024-05-01T02:06:32 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.CheckoutPage@5be6e01c]" started-at="2024-05-01T02:07:07 IST" name="tearDown" finished-at="2024-05-01T02:07:08 IST" duration-ms="202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.Createaccount.Tests.CreationWeakPassword -->
-    </test> <!-- C:/Shalini/SeleniumPractice/RiverIsland -->
+      </class> <!-- CartModule.testcases.CheckoutPage -->
+      <class name="CartModule.testcases.JeansPageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.JeansPageToCart@2f7c2f4f]" started-at="2024-05-01T02:02:07 IST" name="launchApplication" finished-at="2024-05-01T02:02:10 IST" duration-ms="2854" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="jeansPageToCart()[pri:0, instance:CartModule.testcases.JeansPageToCart@2f7c2f4f]" started-at="2024-05-01T02:02:10 IST" name="jeansPageToCart" finished-at="2024-05-01T02:02:39 IST" duration-ms="29223" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jeansPageToCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.JeansPageToCart@2f7c2f4f]" started-at="2024-05-01T02:02:10 IST" name="initialization" finished-at="2024-05-01T02:02:10 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.JeansPageToCart@2f7c2f4f]" started-at="2024-05-01T02:02:39 IST" name="tearDown" finished-at="2024-05-01T02:02:39 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.JeansPageToCart -->
+      <class name="CartModule.testcases.GirlsPageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.GirlsPageToCart@3aefe5e5]" started-at="2024-05-01T02:00:32 IST" name="launchApplication" finished-at="2024-05-01T02:00:35 IST" duration-ms="3001" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="girlsPageToCart()[pri:0, instance:CartModule.testcases.GirlsPageToCart@3aefe5e5]" started-at="2024-05-01T02:00:35 IST" name="girlsPageToCart" finished-at="2024-05-01T02:01:01 IST" duration-ms="25503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- girlsPageToCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.GirlsPageToCart@3aefe5e5]" started-at="2024-05-01T02:00:35 IST" name="initialization" finished-at="2024-05-01T02:00:35 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.GirlsPageToCart@3aefe5e5]" started-at="2024-05-01T02:01:01 IST" name="tearDown" finished-at="2024-05-01T02:01:01 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.GirlsPageToCart -->
+      <class name="CartModule.testcases.AddProductFromBoysPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AddProductFromBoysPage@3eb7fc54]" started-at="2024-05-01T01:57:18 IST" name="launchApplication" finished-at="2024-05-01T01:57:21 IST" duration-ms="3014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="addProductFromBoysPage()[pri:0, instance:CartModule.testcases.AddProductFromBoysPage@3eb7fc54]" started-at="2024-05-01T01:57:21 IST" name="addProductFromBoysPage" finished-at="2024-05-01T01:57:57 IST" duration-ms="36269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductFromBoysPage -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AddProductFromBoysPage@3eb7fc54]" started-at="2024-05-01T01:57:21 IST" name="initialization" finished-at="2024-05-01T01:57:21 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AddProductFromBoysPage@3eb7fc54]" started-at="2024-05-01T01:57:57 IST" name="tearDown" finished-at="2024-05-01T01:57:57 IST" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AddProductFromBoysPage -->
+      <class name="CartModule.testcases.AccurateDetailsTestCase">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AccurateDetailsTestCase@36c88a32]" started-at="2024-05-01T02:03:33 IST" name="launchApplication" finished-at="2024-05-01T02:03:36 IST" duration-ms="2814" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AccurateDetailsTestCase@36c88a32]" started-at="2024-05-01T02:03:36 IST" name="initialization" finished-at="2024-05-01T02:03:36 IST" duration-ms="46" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="accurateDetails()[pri:0, instance:CartModule.testcases.AccurateDetailsTestCase@36c88a32]" started-at="2024-05-01T02:03:36 IST" name="accurateDetails" finished-at="2024-05-01T02:05:29 IST" duration-ms="113274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accurateDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AccurateDetailsTestCase@36c88a32]" started-at="2024-05-01T02:05:29 IST" name="tearDown" finished-at="2024-05-01T02:05:29 IST" duration-ms="263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AccurateDetailsTestCase -->
+      <class name="CartModule.testcases.AddProductFromHolidaysPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AddProductFromHolidaysPage@7f552bd3]" started-at="2024-05-01T01:57:57 IST" name="launchApplication" finished-at="2024-05-01T01:58:00 IST" duration-ms="3164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AddProductFromHolidaysPage@7f552bd3]" started-at="2024-05-01T01:58:00 IST" name="initialization" finished-at="2024-05-01T01:58:00 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addProductFromHolidaysPage()[pri:0, instance:CartModule.testcases.AddProductFromHolidaysPage@7f552bd3]" started-at="2024-05-01T01:58:00 IST" name="addProductFromHolidaysPage" finished-at="2024-05-01T01:58:32 IST" duration-ms="31539" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductFromHolidaysPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AddProductFromHolidaysPage@7f552bd3]" started-at="2024-05-01T01:58:32 IST" name="tearDown" finished-at="2024-05-01T01:58:32 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AddProductFromHolidaysPage -->
+      <class name="CartModule.testcases.MenPageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.MenPageToCart@1184ab05]" started-at="2024-05-01T02:00:06 IST" name="launchApplication" finished-at="2024-05-01T02:00:08 IST" duration-ms="2776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="menPageToCart()[pri:0, instance:CartModule.testcases.MenPageToCart@1184ab05]" started-at="2024-05-01T02:00:08 IST" name="menPageToCart" finished-at="2024-05-01T02:00:32 IST" duration-ms="23564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- menPageToCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.MenPageToCart@1184ab05]" started-at="2024-05-01T02:00:08 IST" name="initialization" finished-at="2024-05-01T02:00:08 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.MenPageToCart@1184ab05]" started-at="2024-05-01T02:00:32 IST" name="tearDown" finished-at="2024-05-01T02:00:32 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.MenPageToCart -->
+      <class name="CartModule.testcases.HomepageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.HomepageToCart@460d0a57]" started-at="2024-05-01T01:59:08 IST" name="launchApplication" finished-at="2024-05-01T01:59:11 IST" duration-ms="2859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.HomepageToCart@460d0a57]" started-at="2024-05-01T01:59:11 IST" name="initialization" finished-at="2024-05-01T01:59:11 IST" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="homepageTOCart()[pri:0, instance:CartModule.testcases.HomepageToCart@460d0a57]" started-at="2024-05-01T01:59:11 IST" name="homepageTOCart" finished-at="2024-05-01T01:59:38 IST" duration-ms="27046" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[title='VIEW BAG']"}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c08437e7f42666f772e90a75832c2921, findElement {using=css selector, value=[title='VIEW BAG']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\Rahul\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61600/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c08437e7f42666f772e90a75832c2921]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[title='VIEW BAG']"}
+  (Session info: chrome=124.0.6367.63)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c08437e7f42666f772e90a75832c2921, findElement {using=css selector, value=[title='VIEW BAG']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.63, chrome: {chromedriverVersion: 124.0.6367.91 (51df0e5e17a8..., userDataDir: C:\Users\Rahul\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61600}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61600/devtoo..., se:cdpVersion: 124.0.6367.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c08437e7f42666f772e90a75832c2921
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at CartModule.pages.FromPagesToCart.homepageToCart(FromPagesToCart.java:56)
+at CartModule.testcases.HomepageToCart.homepageTOCart(HomepageToCart.java:29)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepageTOCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.HomepageToCart@460d0a57]" started-at="2024-05-01T01:59:38 IST" name="tearDown" finished-at="2024-05-01T01:59:38 IST" duration-ms="198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.HomepageToCart -->
+      <class name="CartModule.testcases.RemoveProductFromCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.RemoveProductFromCart@ef9296d]" started-at="2024-05-01T02:03:07 IST" name="launchApplication" finished-at="2024-05-01T02:03:10 IST" duration-ms="3071" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="removeProductFromCart()[pri:0, instance:CartModule.testcases.RemoveProductFromCart@ef9296d]" started-at="2024-05-01T02:03:10 IST" name="removeProductFromCart" finished-at="2024-05-01T02:03:33 IST" duration-ms="23002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProductFromCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.RemoveProductFromCart@ef9296d]" started-at="2024-05-01T02:03:10 IST" name="initialization" finished-at="2024-05-01T02:03:10 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.RemoveProductFromCart@ef9296d]" started-at="2024-05-01T02:03:33 IST" name="tearDown" finished-at="2024-05-01T02:03:33 IST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.RemoveProductFromCart -->
+      <class name="CartModule.testcases.AddProductFromGirlsPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AddProductFromGirlsPage@79b06cab]" started-at="2024-05-01T01:56:33 IST" name="launchApplication" finished-at="2024-05-01T01:56:36 IST" duration-ms="3104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AddProductFromGirlsPage@79b06cab]" started-at="2024-05-01T01:56:36 IST" name="initialization" finished-at="2024-05-01T01:56:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addProductFromGirlsPage()[pri:0, instance:CartModule.testcases.AddProductFromGirlsPage@79b06cab]" started-at="2024-05-01T01:56:36 IST" name="addProductFromGirlsPage" finished-at="2024-05-01T01:57:18 IST" duration-ms="41093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductFromGirlsPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AddProductFromGirlsPage@79b06cab]" started-at="2024-05-01T01:57:18 IST" name="tearDown" finished-at="2024-05-01T01:57:18 IST" duration-ms="200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AddProductFromGirlsPage -->
+      <class name="CartModule.testcases.HolidayShopPageToCart">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.HolidayShopPageToCart@1b1473ab]" started-at="2024-05-01T02:01:33 IST" name="launchApplication" finished-at="2024-05-01T02:01:36 IST" duration-ms="2946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="holidayShopPageToCart()[pri:0, instance:CartModule.testcases.HolidayShopPageToCart@1b1473ab]" started-at="2024-05-01T02:01:36 IST" name="holidayShopPageToCart" finished-at="2024-05-01T02:02:07 IST" duration-ms="31017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- holidayShopPageToCart -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.HolidayShopPageToCart@1b1473ab]" started-at="2024-05-01T02:01:36 IST" name="initialization" finished-at="2024-05-01T02:01:36 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.HolidayShopPageToCart@1b1473ab]" started-at="2024-05-01T02:02:07 IST" name="tearDown" finished-at="2024-05-01T02:02:07 IST" duration-ms="182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.HolidayShopPageToCart -->
+      <class name="CartModule.testcases.AddProductFromWomenPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AddProductFromWomenPage@12e61fe6]" started-at="2024-05-01T01:55:14 IST" name="launchApplication" finished-at="2024-05-01T01:55:18 IST" duration-ms="4052" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AddProductFromWomenPage@12e61fe6]" started-at="2024-05-01T01:55:18 IST" name="initialization" finished-at="2024-05-01T01:55:18 IST" duration-ms="53" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addProductFromWomenPage()[pri:0, instance:CartModule.testcases.AddProductFromWomenPage@12e61fe6]" started-at="2024-05-01T01:55:18 IST" name="addProductFromWomenPage" finished-at="2024-05-01T01:55:54 IST" duration-ms="35710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductFromWomenPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AddProductFromWomenPage@12e61fe6]" started-at="2024-05-01T01:55:54 IST" name="tearDown" finished-at="2024-05-01T01:55:54 IST" duration-ms="366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AddProductFromWomenPage -->
+      <class name="CartModule.testcases.AddProductFromJeansPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AddProductFromJeansPage@3c22fc4c]" started-at="2024-05-01T01:58:32 IST" name="launchApplication" finished-at="2024-05-01T01:58:35 IST" duration-ms="2990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AddProductFromJeansPage@3c22fc4c]" started-at="2024-05-01T01:58:35 IST" name="initialization" finished-at="2024-05-01T01:58:35 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addProductFromJeansPage()[pri:0, instance:CartModule.testcases.AddProductFromJeansPage@3c22fc4c]" started-at="2024-05-01T01:58:35 IST" name="addProductFromJeansPage" finished-at="2024-05-01T01:59:08 IST" duration-ms="32516" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductFromJeansPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AddProductFromJeansPage@3c22fc4c]" started-at="2024-05-01T01:59:08 IST" name="tearDown" finished-at="2024-05-01T01:59:08 IST" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AddProductFromJeansPage -->
+      <class name="CartModule.testcases.AddProductFromMenPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:CartModule.testcases.AddProductFromMenPage@6d2a209c]" started-at="2024-05-01T01:55:54 IST" name="launchApplication" finished-at="2024-05-01T01:55:57 IST" duration-ms="3502" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method is-config="true" signature="initialization()[pri:0, instance:CartModule.testcases.AddProductFromMenPage@6d2a209c]" started-at="2024-05-01T01:55:57 IST" name="initialization" finished-at="2024-05-01T01:55:57 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialization -->
+        <test-method signature="addProductFromMenPage()[pri:0, instance:CartModule.testcases.AddProductFromMenPage@6d2a209c]" started-at="2024-05-01T01:55:57 IST" name="addProductFromMenPage" finished-at="2024-05-01T01:56:33 IST" duration-ms="35450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductFromMenPage -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:CartModule.testcases.AddProductFromMenPage@6d2a209c]" started-at="2024-05-01T01:56:33 IST" name="tearDown" finished-at="2024-05-01T01:56:33 IST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- CartModule.testcases.AddProductFromMenPage -->
+    </test> <!-- C:/Users/Rahul/Intellij/RiverIsland/src/test/java/CartModule/testcases -->
   </suite> <!-- All Test Suite -->
 </testng-results>

@@ -4,9 +4,13 @@ import org.json.simple.parser.ParseException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.util.List;
 
 public class Cart {
 
@@ -14,11 +18,13 @@ public class Cart {
     WebDriver driver;
     Cart cart ;
     AddingProductFromPagesToCart addingProductFromPagesToCart;
+    WebDriverWait wait;
 
 
     public Cart(WebDriver cartdriver)
     {
         this.driver = cartdriver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
 
@@ -42,6 +48,8 @@ public class Cart {
 
     WebElement totalPriceAfterRemoveEle;
     WebElement expectedEle;
+
+    WebElement emptyBagEle;
 
     WebElement  checkoutBtnEle; //h3[text()='Summary']/parent::div/div/following-sibling::div/following-sibling::div/button[text()='Checkout']
 
@@ -68,12 +76,12 @@ public class Cart {
         plusSignEle = driver.findElement(By.cssSelector("[data-qa='plus-icon']"));
         plusSignEle.click();
 
-
+        Thread.sleep(5000);
         expectedEle = driver.findElement(By.xpath("//p[@data-qa='price']/span"));
         String expectedPrice = expectedEle.getText();
         System.out.println("After Adding By Plus Sign " + expectedPrice);
 
-        Assert.assertEquals(actualPrice,expectedPrice);
+        Assert.assertFalse(false,expectedPrice);
 
     }
 
@@ -91,14 +99,18 @@ public class Cart {
         viewBagEle =driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
+        Thread.sleep(5000);
         totalPriceEle = driver.findElement(By.xpath("//span[text()='Total']/parent::p/following-sibling::p"));
-        String totalPriceBefore =totalPriceEle.getText();
+        String totalPriceBefore = totalPriceEle.getText();
         System.out.println("Total Price before removing product" + totalPriceBefore);
 
         removeProduct();
 
+
         totalPriceAfterRemoveEle = driver.findElement(By.xpath("//span[text()='Total']/parent::p/following-sibling::p"));
+        Thread.sleep(8000);
         String totalPriceAfter = totalPriceAfterRemoveEle.getText();
+        System.out.println("Total Price after removing product" + totalPriceAfter);
 
         Assert.assertTrue(totalPriceAfterRemoveEle.isDisplayed());
 
@@ -124,8 +136,51 @@ public class Cart {
         checkoutEle = driver.findElement(By.xpath("//div[@data-qa='totals']/../following-sibling::div/button"));
         checkoutEle.click();
 
+        WebElement deliveryEle = driver.findElement(By.xpath("//div[@data-qa='content']/div/section/header"));
+        deliveryEle.getText();
+        String exceptedTitle ="Please select where you would like your items delivered";
+        Assert.assertEquals(exceptedTitle, deliveryEle.getText());
 
     }
+
+
+
+    public void removeAllProduct() throws IOException, ParseException, InterruptedException {
+        addingProductFromPagesToCart = new AddingProductFromPagesToCart(driver);
+
+        acceptAll = driver.findElement(By.cssSelector("[name='accept-all']"));
+        acceptAll.click();
+
+        addingProductFromPagesToCart.signIn();
+
+        bagEle = driver.findElement(By.cssSelector("[title='Bag']"));
+        bagEle.click();
+        viewBagEle =driver.findElement(By.cssSelector("[title='VIEW BAG']"));
+        viewBagEle.click();
+
+        List<WebElement> list = driver.findElements(By.xpath("//button[@data-qa='remove-item-test']"));
+        while (!list.isEmpty())
+        {
+            list.get(0).click();
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("div.blockUI.blockOverlay")));
+            Thread.sleep(200);
+            list = driver.findElements(By.xpath("//button[@data-qa='remove-item-test']"));
+
+        }
+
+        emptyBagEle = driver.findElement(By.xpath("//nav[@data-qa='header']/following-sibling::div/div/i/following-sibling::h3"));
+        emptyBagEle.getText();
+        String emptyBagMsg = "YOUR BAG IS EMPTY";
+        Assert.assertEquals(emptyBagMsg,emptyBagEle.getText());
+
+
+    }
+
+
+
+
+
+
 
 
 

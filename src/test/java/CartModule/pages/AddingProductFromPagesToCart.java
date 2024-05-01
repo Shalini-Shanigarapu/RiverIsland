@@ -13,6 +13,7 @@ import org.testng.Assert;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 public class AddingProductFromPagesToCart {
 
@@ -80,13 +81,17 @@ public class AddingProductFromPagesToCart {
 
     WebElement jeansEle;
 
-    WebElement holidayShopWomenEle;
+    WebElement exceptedPageTextEle;
+    WebElement productNameInWomen ;
+    WebElement productNameInMen;
+    WebElement productNameInGirls;
+    WebElement productNameInBoys;
+    WebElement productNameInHolidayShop;
+    WebElement productNameInJeans;
 
-    WebElement holidayShopMensEle;
 
-    WebElement holidayShopGirlsEle;
-
-    WebElement holidayShopBoysEle;
+    boolean flag;
+    String verifyProduct;
 
 
 
@@ -115,10 +120,13 @@ public class AddingProductFromPagesToCart {
         productsTopBar = driver.findElement(By.cssSelector("[data-qa='topBar']"));
         actionsClass.scrollToElement(productsTopBar);
 
-        //h5[text()='Green crochet panel oversized shirt']/preceding-sibling::button/preceding-sibling::div/../..
-
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
+
+
+        productNameInWomen = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        System.out.println(productNameInWomen.getText());
+        String productNameInStr = productNameInWomen.getText();
 
         sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
         sizeEle.click();
@@ -129,8 +137,18 @@ public class AddingProductFromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
-        String exceptedTitle ="Cart";
-        Assert.assertEquals(exceptedTitle,driver.getTitle());
+
+
+        List<WebElement>cartItems= driver.findElements(By.xpath("//div[@data-qa='cart-header']/following-sibling::div/div"));
+       flag = false;
+        for (WebElement item : cartItems) {
+            if (item.getText().contains(productNameInStr))
+            {
+                flag = true;
+                break;
+            }
+        }
+        Assert.assertTrue(flag);
 
     }
 
@@ -165,6 +183,41 @@ public class AddingProductFromPagesToCart {
 //        signInBtnEle.click();
 
     }
+
+
+
+
+    public void withoutSignIn() throws IOException, ParseException, InterruptedException {
+
+        jse = (JavascriptExecutor)driver;
+
+
+        emailEle = driver.findElement(By.cssSelector("#email"));
+        emailEle.click();
+
+        JSONParser jsonParser = new JSONParser();
+        FileReader fileReader = new FileReader("src/test/TestData/ file.json");
+        Object obj = jsonParser.parse(fileReader);
+        JSONObject jsonObject = (JSONObject)obj;
+
+        String email = jsonObject.get("Email").toString();
+        String password = jsonObject.get("Password").toString();
+
+        emailEle.sendKeys(email);
+        continueBtnEle = driver.findElement(By.cssSelector("[type='submit']"));
+        continueBtnEle.click();
+        passwordEle = driver.findElement(By.cssSelector("#password"));
+        passwordEle.click();
+        passwordEle.sendKeys(password);
+        Thread.sleep(10000);
+
+        signInBtnEle = driver.findElement(By.xpath("//button[text()='Sign in']"));
+        jse.executeScript("arguments[0].click();",signInBtnEle);
+//        signInBtnEle.click();
+
+    }
+
+
 
 
 
@@ -216,7 +269,11 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
-        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
+        productNameInMen = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        System.out.println(productNameInMen.getText());
+        String productNameInStr = productNameInMen.getText();
+
+        sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::ul/li/following-sibling::li/div[text()='"+size+"']"));
         sizeEle.click();
 
         addToCart = driver.findElement(By.xpath("//div[@id='add-to-bag--observer']/button[@aria-label='Add to bag']"));
@@ -226,8 +283,18 @@ public class AddingProductFromPagesToCart {
         viewBagEle.click();
 
 
-        String exceptedTitle ="Cart";
-        Assert.assertEquals(exceptedTitle,driver.getTitle());
+        List<WebElement>cartItems= driver.findElements(By.xpath("//div[@data-qa='cart-header']/following-sibling::div/div"));
+        flag = false;
+        for (WebElement item : cartItems) {
+            if (item.getText().contains(productNameInStr))
+            {
+                flag = true;
+                break;
+            }
+        }
+        Assert.assertTrue(flag);
+
+
 
     }
 
@@ -259,14 +326,26 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
+        productNameInGirls = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        System.out.println(productNameInGirls.getText());
+        String productNameInStr = productNameInGirls.getText();
+
         selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
         selectSizeEle.click();
 
 
         addToCartMethod("12-18 Mths (UK)");
 
-        String exceptedTitle ="Cart";
-        Assert.assertEquals(exceptedTitle,driver.getTitle());
+        List<WebElement>cartItems= driver.findElements(By.xpath("//div[@data-qa='cart-header']/following-sibling::div/div"));
+        flag = false;
+        for (WebElement item : cartItems) {
+            if (item.getText().contains(productNameInStr))
+            {
+                flag = true;
+                break;
+            }
+        }
+        Assert.assertTrue(flag);
 
     }
 
@@ -298,13 +377,26 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
+        productNameInBoys = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        System.out.println(productNameInBoys.getText());
+        String productNameInStr = productNameInBoys.getText();
+
+
         selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
         selectSizeEle.click();
 
         addToCartMethod("3-6 Mths (UK)");
 
-        String exceptedTitle ="Cart";
-        Assert.assertEquals(exceptedTitle,driver.getTitle());
+        List<WebElement>cartItems= driver.findElements(By.xpath("//div[@data-qa='cart-header']/following-sibling::div/div"));
+        flag = false;
+        for (WebElement item : cartItems) {
+            if (item.getText().contains(productNameInStr))
+            {
+                flag = true;
+                break;
+            }
+        }
+        Assert.assertTrue(flag);
 
     }
 
@@ -333,6 +425,10 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
+        productNameInHolidayShop = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        System.out.println(productNameInHolidayShop.getText());
+        String productNameInStr = productNameInHolidayShop.getText();
+
         sizeEle= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/following-sibling::div/following-sibling::ul/li/div[text()='"+size+"']"));
         sizeEle.click();
 
@@ -342,8 +438,16 @@ public class AddingProductFromPagesToCart {
         viewBagEle = driver.findElement(By.cssSelector("[title='VIEW BAG']"));
         viewBagEle.click();
 
-        String exceptedTitle ="Cart";
-        Assert.assertEquals(exceptedTitle,driver.getTitle());
+        List<WebElement>cartItems= driver.findElements(By.xpath("//div[@data-qa='cart-header']/following-sibling::div/div"));
+        flag = false;
+        for (WebElement item : cartItems) {
+            if (item.getText().contains(productNameInStr))
+            {
+                flag = true;
+                break;
+            }
+        }
+        Assert.assertTrue(flag);
 
     }
 
@@ -371,16 +475,81 @@ public class AddingProductFromPagesToCart {
         productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
         productEle.click();
 
+        productNameInJeans = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        System.out.println(productNameInJeans.getText());
+        String productNameInStr = productNameInJeans.getText();
+
         selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
         selectSizeEle.click();
 
         addToCartMethod("32 short (UK)");
 
-        String exceptedTitle ="Cart";
-        Assert.assertEquals(exceptedTitle,driver.getTitle());
+        List<WebElement>cartItems= driver.findElements(By.xpath("//div[@data-qa='cart-header']/following-sibling::div/div"));
+        flag = false;
+        for (WebElement item : cartItems) {
+            if (item.getText().contains(productNameInStr))
+            {
+                flag = true;
+                break;
+            }
+        }
+        Assert.assertTrue(flag);
 
 
     }
+
+
+    public void     addProductFromGirlsWithoutSignIn() throws InterruptedException, IOException, ParseException
+    {
+        actionsClass = new ActionsClass(driver);
+        acceptAll = driver.findElement(By.cssSelector("[name='accept-all']"));
+        acceptAll.click();
+
+
+
+        girlsEle = driver.findElement(By.xpath("//span[text()='girls']"));
+        girlsEle.click();
+
+        popularCategoriesEle = driver.findElement(By.xpath("//h2[text()='Popular Categories']"));
+        actionsClass.scrollToElement(popularCategoriesEle);
+
+        allGirlsWearEle = driver.findElement(By.cssSelector("[data-promo-name='All Girlswear']"));
+        actionsClass.scrollToElement(allGirlsWearEle);
+        Thread.sleep(5000);
+        allGirlsWearEle.click();
+
+        productsTopBar = driver.findElement(By.cssSelector("[data-qa='topBar']"));
+        actionsClass.scrollToElement(productsTopBar);
+
+
+        productEle = driver.findElement(By.xpath("//div[@data-qa='topBar']/following-sibling::div/div/following-sibling::div/a"));
+        productEle.click();
+
+        selectSizeEle= driver.findElement(By.xpath("//div[@data-cs-override-id='size-selector']/button"));
+        selectSizeEle.click();
+
+
+        addToCartMethod("12-18 Mths (UK)");
+
+        checkoutEle = driver.findElement(By.xpath("//div[@data-qa='totals']/../following-sibling::div/button"));
+        checkoutEle.click();
+
+        exceptedPageTextEle =driver.findElement(By.xpath("//div[@id='login']/div/div/div/div/h1"));
+        System.out.println(exceptedPageTextEle.getText());
+        String exceptedPageText = "CHECKOUT";
+        Assert.assertEquals(exceptedPageText,exceptedPageTextEle.getText());
+
+        withoutSignIn();
+
+        WebElement deliveryEle = driver.findElement(By.xpath("//div[@data-qa='content']/div/section/header"));
+        deliveryEle.getText();
+
+        String exceptedTitle ="Please select where you would like your items delivered";
+        Assert.assertEquals(exceptedTitle,deliveryEle.getText());
+
+    }
+
+
 
 
 

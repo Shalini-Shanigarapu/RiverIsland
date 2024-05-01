@@ -62,6 +62,8 @@ public class CreateAccountPage {
         System.out.println("Random Generated Password: " + new String(password));
         WebElement RandomPassword = driver.findElement(By.id(getpassword));
         RandomPassword.sendKeys(new String(password));
+        System.out.println(new String(password));
+
 
 
     }

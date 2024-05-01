@@ -31,6 +31,14 @@ public class MyAccountPage {
     public void setEnterEmail() {
         String randomMail = RandomString.make();
         String email = randomMail+"@gmail.com";
+        System.out.println(email);
+        driver.findElement(By.id(enterEmail)).sendKeys(email);
+        driver.findElement(By.xpath(continuebtn)).click();
+    }
+    public void setEmail() {
+        String randomMail = RandomString.make();
+        String email = randomMail+"@yopmail.com";
+        System.out.println(email);
         driver.findElement(By.id(enterEmail)).sendKeys(email);
         driver.findElement(By.xpath(continuebtn)).click();
     }

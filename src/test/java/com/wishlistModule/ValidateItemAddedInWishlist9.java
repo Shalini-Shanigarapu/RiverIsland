@@ -1,5 +1,4 @@
 package com.wishlistModule;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,21 +20,21 @@ public class ValidateItemAddedInWishlist9 {
         driver.findElement(By.cssSelector("[name='accept-all']")).click();
         driver.findElement(By.cssSelector("[title='My account']")).click();
 
-
         driver.findElement(By.cssSelector("[id='email']")).sendKeys("qatester1177@gmail.com");
         driver.findElement(By.cssSelector("[data-testid='email-login-button']")).click();
         driver.findElement(By.cssSelector("#password")).sendKeys("Test@1234");
         Thread.sleep(20000);
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
-
-
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
+        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
 
         String expectedTitle="Your Wishlist - River Island";
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
-        driver.quit();
+
+
+        //  no items-You currently have no item(s) in your wishlist.
+        //driver.quit();
     }
 
 }

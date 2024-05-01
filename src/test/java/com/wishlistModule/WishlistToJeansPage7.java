@@ -53,8 +53,7 @@ public class WishlistToJeansPage7 {
         act.scrollToElement(jeanGirlWishlistBtn).build().perform();
         jeanGirlWishlistBtn.click();
 
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
-        String expectedTitle="Your Wishlist - River Island";
+        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();        String expectedTitle="Your Wishlist - River Island";
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
         driver.quit();

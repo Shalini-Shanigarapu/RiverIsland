@@ -2,6 +2,7 @@ package com.wishlistModule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -9,10 +10,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 
 public class ValidateWishlistWithNoItems1 {
-
         WebDriver driver;
-
-
         @Test
         public void withNoItemInWishlistPage () throws InterruptedException {
             driver = new ChromeDriver();
@@ -25,21 +23,27 @@ public class ValidateWishlistWithNoItems1 {
             driver.findElement(By.cssSelector("[name='accept-all']")).click();
             driver.findElement(By.cssSelector("[title='My account']")).click();
 
-            driver.findElement(By.cssSelector("[id='email']")).sendKeys("qatester1177@gmail.com");
+            driver.findElement(By.cssSelector("[id='email']")).sendKeys("sample@gmail.com");
             driver.findElement(By.cssSelector("[data-testid='email-login-button']")).click();
-            driver.findElement(By.cssSelector("#password")).sendKeys("Test@1234");
+            driver.findElement(By.cssSelector("#password")).sendKeys("Sample@123");
             Thread.sleep(20000);
             driver.findElement(By.xpath(" //button[@type='submit']")).click();
             driver.findElement(By.cssSelector("[title='My account']")).click();
 
-            driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
-
+            driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
             String expectedTitle="Your Wishlist - River Island";
             String actualTitle=driver.getTitle();
             Assert.assertEquals(actualTitle,expectedTitle);
+
+
+            WebElement noItemInWishlistText =driver.findElement(By.xpath("//h2[@class='ui-body-text']"));
+            String actualText=noItemInWishlistText.getText();
+            String expectedText="You currently have no item(s) in your wishlist.";
+           Assert.assertEquals(actualText,expectedText);
+            System.out.println(actualText);
+            System.out.println(expectedText);
+
             driver.quit();
-
-
 
         }
 

@@ -8,13 +8,13 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class ValidUserAccessWishlistFromAccount11 {
+public class ValidUserCanRemoveOneItem12 {
 
     WebDriver driver;
 
 
     @Test
-    public void validUserAccessWishlistFromAccount11 () throws InterruptedException {
+    public void validUserCanRemoveOneItem13 () throws InterruptedException {
         driver = new ChromeDriver();
 
         driver.get("https://www.riverisland.com/");
@@ -33,20 +33,15 @@ public class ValidUserAccessWishlistFromAccount11 {
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
 
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
 
-        driver.findElement(By.xpath("//button[@name='DeleteAllItemsFromWishlist']")).click();
-
-        driver.findElement(By.xpath("//span[normalize-space()='Remove all items']")).click();
-
+        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
+        driver.findElement(By.xpath("//span[@class='icon icon-X']")).click();
         driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
 
         String expectedTitle="Your Wishlist - River Island";
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
         driver.quit();
-            }
-
-
+    }
 
 }

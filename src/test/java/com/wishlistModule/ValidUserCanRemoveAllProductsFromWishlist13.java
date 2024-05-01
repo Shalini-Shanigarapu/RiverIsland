@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class ValidUserCanRemoveAllProductsFromWishlist14 {
+public class ValidUserCanRemoveAllProductsFromWishlist13 {
 
 
     WebDriver driver;
@@ -35,8 +35,7 @@ public class ValidUserCanRemoveAllProductsFromWishlist14 {
 
         driver.findElement(By.xpath("//button[@name='DeleteAllItemsFromWishlist']")).click();
 
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
-
+    driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
          String expectedTitle="Your Wishlist - River Island";
          String actualTitle=driver.getTitle();
          Assert.assertEquals(actualTitle,expectedTitle);

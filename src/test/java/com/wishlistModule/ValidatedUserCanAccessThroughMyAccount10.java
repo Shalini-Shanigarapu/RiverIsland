@@ -10,33 +10,32 @@ import java.time.Duration;
 
 public class ValidatedUserCanAccessThroughMyAccount10 {
 
-        WebDriver driver;
+    WebDriver driver;
 
-        @Test
-        public void itemAddedPage() throws InterruptedException {
-            driver = new ChromeDriver();
-            driver.get("https://www.riverisland.com/");
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driver.manage().window().maximize();
-            Thread.sleep(10000);
+    @Test
+    public void itemAddedPage() throws InterruptedException {
+        driver = new ChromeDriver();
+        driver.get("https://www.riverisland.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        Thread.sleep(10000);
 
-            driver.findElement(By.cssSelector("[name='accept-all']")).click();
-            driver.findElement(By.cssSelector("[title='My account']")).click();
+        driver.findElement(By.cssSelector("[name='accept-all']")).click();
+        driver.findElement(By.cssSelector("[title='My account']")).click();
 
-            driver.findElement(By.cssSelector("[id='email']")).sendKeys("qatester1177@gmail.com");
-            driver.findElement(By.cssSelector("[data-testid='email-login-button']")).click();
-            driver.findElement(By.cssSelector("#password")).sendKeys("Test@1234");
-            Thread.sleep(20000);
-            driver.findElement(By.xpath(" //button[@type='submit']")).click();
+        driver.findElement(By.cssSelector("[id='email']")).sendKeys("qatester1177@gmail.com");
+        driver.findElement(By.cssSelector("[data-testid='email-login-button']")).click();
+        driver.findElement(By.cssSelector("#password")).sendKeys("Test@1234");
+        Thread.sleep(20000);
+        driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
-            driver.findElement(By.cssSelector("[title='My account']")).click();
+        driver.findElement(By.cssSelector("[title='My account']")).click();
 
-            driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
+        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
+        String expectedTitle = "Your Wishlist - River Island";
+        String actualTitle = driver.getTitle();
+        Assert.assertEquals(actualTitle, expectedTitle);
+        driver.quit();
 
-            String expectedTitle="Your Wishlist - River Island";
-            String actualTitle=driver.getTitle();
-            Assert.assertEquals(actualTitle,expectedTitle);
-            driver.quit();
-
-        }
     }
+}

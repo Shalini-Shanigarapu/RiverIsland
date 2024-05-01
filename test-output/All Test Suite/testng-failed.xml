@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/Rahul/Intellij/RiverIsland/src/test/java/CartModule/testcases(failed)">
+    <classes>
+      <class name="CartModule.testcases.HomepageToCart">
+        <methods>
+          <include name="initialization"/>
+          <include name="tearDown"/>
+          <include name="homepageTOCart"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- CartModule.testcases.HomepageToCart -->
+    </classes>
+  </test> <!-- C:/Users/Rahul/Intellij/RiverIsland/src/test/java/CartModule/testcases(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

@@ -36,12 +36,18 @@ public class ValidateItemInWishPresentEvenAfterLogoutAndLogin11 {
         driver.findElement(By.linkText("Bags, Purses & Luggage")).click();
 
 
-        WebElement womenProduct= driver.findElement(By.xpath("//div[@class='attributes']/h5[text()='Brown beaded shoulder bag']"));
+        WebElement womenProduct= driver.findElement(By.xpath("//div[@data-qa='product-listing']/a"));
 
         act.scrollToElement(womenProduct).build().perform();
         womenProduct.click();
 
-        WebElement womenWishlistBtn= driver.findElement(By.xpath("//button[@class='button__p9ABR wishlist-btn__o9UWA product-details__wishlist-button__T_K4C product-details__three_point_two__kVHfD']"));
+        WebElement actualProductElement= driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        String actualProductName=actualProductElement.getText();
+
+        WebElement actualPriceElement = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/div/p/span"));
+        String actualPrice=actualPriceElement.getText();
+
+        WebElement womenWishlistBtn= driver.findElement(By.xpath("//span[text()='Add to bag']/parent::span/parent::button/parent::div/following-sibling::button/*[name()='svg']"));
 
         act.scrollToElement(womenWishlistBtn).build().perform();
         womenWishlistBtn.click();
@@ -50,7 +56,7 @@ public class ValidateItemInWishPresentEvenAfterLogoutAndLogin11 {
 
         driver.findElement(By.cssSelector("[title='My account']")).click();
 
-        driver.findElement(By.xpath("//div[@class='App__sign-out-button-desktop___e7sKW']//button[@type='button'][normalize-space()='Sign out']")).click();
+        driver.findElement(By.xpath("//nav[@data-qa='menu']/following-sibling::div/following-sibling::div/div/button[text()='Sign out']")).click();
 
 
         /**********Re-Login*******************/
@@ -65,15 +71,26 @@ public class ValidateItemInWishPresentEvenAfterLogoutAndLogin11 {
 
         driver.findElement(By.cssSelector("[title='My account']")).click();
 
-        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
+        driver.findElement(By.cssSelector("[title='Wishlist']")).click();
         String expectedTitle="Your Wishlist - River Island";
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
-        driver.quit();
 
 
+        WebElement expectedProductElement=driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
+        expectedProductElement.getText();
+        String expectedProductName=expectedProductElement.getText();
+
+        WebElement expectedPriceElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/following-sibling::div/div/span"));
+        String expectedPrice = expectedPriceElement.getText();
 
 
+        System.out.println("Before Product Name" + actualProductName);
+        System.out.println("After Product Name" + expectedProductName);
+        System.out.println("Before Product Name" + actualPrice);
+        System.out.println("After Product Name" + expectedPrice);
+        Assert.assertEquals(actualProductName,expectedProductName);
+        Assert.assertEquals(actualPrice,expectedPrice);
     }
 
 }

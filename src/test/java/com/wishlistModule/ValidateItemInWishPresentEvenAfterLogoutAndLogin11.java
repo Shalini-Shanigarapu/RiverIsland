@@ -91,6 +91,8 @@ public class ValidateItemInWishPresentEvenAfterLogoutAndLogin11 {
         System.out.println("After Product Name" + expectedPrice);
         Assert.assertEquals(actualProductName,expectedProductName);
         Assert.assertEquals(actualPrice,expectedPrice);
+
+        driver.quit();
     }
 
 }

@@ -61,5 +61,6 @@ public class WishlistToMenPage3 {
 
             Assert.assertEquals(actualProductName, expectedProductName);
 
+            driver.quit();
         }
 }

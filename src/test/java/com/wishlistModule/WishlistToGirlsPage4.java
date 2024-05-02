@@ -43,7 +43,7 @@ public class WishlistToGirlsPage4 {
         act.scrollToElement(girlWishlistBtn).build().perform();
         girlWishlistBtn.click();
 
-        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
+        driver.findElement(By.cssSelector("[title='Wishlist']")).click();
         String expectedTitle="Your Wishlist - River Island";
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);

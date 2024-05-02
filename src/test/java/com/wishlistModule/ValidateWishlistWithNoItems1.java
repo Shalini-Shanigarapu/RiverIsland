@@ -30,16 +30,16 @@ public class ValidateWishlistWithNoItems1 {
             driver.findElement(By.xpath(" //button[@type='submit']")).click();
             driver.findElement(By.cssSelector("[title='My account']")).click();
 
-            driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
-            String expectedTitle="Your Wishlist - River Island";
-            String actualTitle=driver.getTitle();
-            Assert.assertEquals(actualTitle,expectedTitle);
+            driver.findElement(By.cssSelector("[title='Wishlist']")).click();
 
+            WebElement removeLLProducts = driver.findElement(By.xpath("//button[@name='DeleteAllItemsFromWishlist']"));
+            removeLLProducts.click();
 
-            WebElement noItemInWishlistText =driver.findElement(By.xpath("//h2[@class='ui-body-text']"));
+            Thread.sleep(3000);
+            WebElement noItemInWishlistText =driver.findElement(By.xpath("//div[@data-page-id='wishlist']/div/div/h1/following-sibling::h2"));
             String actualText=noItemInWishlistText.getText();
             String expectedText="You currently have no item(s) in your wishlist.";
-           Assert.assertEquals(actualText,expectedText);
+            Assert.assertEquals(actualText,expectedText);
             System.out.println(actualText);
             System.out.println(expectedText);
 

@@ -31,7 +31,7 @@ public class ValidatedUserCanAccessThroughMyAccount10 {
 
         driver.findElement(By.cssSelector("[title='My account']")).click();
 
-        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
+        driver.findElement(By.cssSelector("[title='Wishlist']")).click();
         String expectedTitle = "Your Wishlist - River Island";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);

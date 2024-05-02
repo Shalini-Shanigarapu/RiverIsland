@@ -2,6 +2,7 @@ package com.wishlistModule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -31,14 +32,15 @@ public class ValidUserCanRemoveAllProductsFromWishlist13 {
         Thread.sleep(20000);
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
+         WebElement wishlistBtn = driver.findElement(By.cssSelector("[title='Wishlist']"));
+         wishlistBtn.click();
 
         driver.findElement(By.xpath("//button[@name='DeleteAllItemsFromWishlist']")).click();
 
-    driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
-         String expectedTitle="Your Wishlist - River Island";
-         String actualTitle=driver.getTitle();
-         Assert.assertEquals(actualTitle,expectedTitle);
+    WebElement noItemInWishlistText =driver.findElement(By.xpath("//div[@data-page-id='wishlist']/div/div/h1/following-sibling::h2"));
+    String actualText=noItemInWishlistText.getText();
+    String expectedText="You currently have no item(s) in your wishlist.";
+    Assert.assertEquals(actualText,expectedText);
          driver.quit();
 
     }

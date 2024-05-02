@@ -49,14 +49,14 @@ public class WishlistToWomenPage2 {
         WebElement wishlistBtnElement = driver.findElement(By.xpath("//span[text()='Add to bag']/parent::span/parent::button/parent::div/following-sibling::button/*[name()='svg']"));
         wishlistBtnElement.click();
 
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
+         WebElement wishlistBtn = driver.findElement(By.xpath("[title='Wishlist']"));
+         wishlistBtn.click();
 
         String expectedTitle="Your Wishlist - River Island";
         String actualTitle=driver.getTitle();
         Assert.assertEquals(actualTitle,expectedTitle);
 
         WebElement expectedProductElement=driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
-        expectedProductElement.getText();
         String expectedProductName=expectedProductElement.getText();
         System.out.println("Before Product Name" + actualProductName);
         System.out.println("After Product Name" + expectedProductName);
@@ -64,7 +64,7 @@ public class WishlistToWomenPage2 {
         Assert.assertEquals(actualProductName,expectedProductName);
 
 
-       // driver.quit();
+        driver.quit();
 
 
 

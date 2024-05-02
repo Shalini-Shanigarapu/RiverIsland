@@ -43,7 +43,7 @@ public class ValidateItemAddedInWishlist9 {
         Assert.assertEquals(actualTitle,expectedTitle);
 
 
-//        driver.quit();
+        driver.quit();
     }
 
 }

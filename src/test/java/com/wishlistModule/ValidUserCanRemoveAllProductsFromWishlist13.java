@@ -14,7 +14,7 @@ public class ValidUserCanRemoveAllProductsFromWishlist13 {
 
     WebDriver driver;
 @Test
-    public void validUserCanRemoveAllProductsFromWishlist14() throws InterruptedException {
+    public void validUserCanRemoveAllProductsFromWishlist13() throws InterruptedException {
 
 
         driver = new ChromeDriver();

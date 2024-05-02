@@ -14,7 +14,7 @@ public class ValidateItemInWishPresentEvenAfterLogoutAndLogin11 {
 
     WebDriver driver;
     @Test
-    public void validateItemInWishPresentEvenAfterLogoutAndLogin12() throws InterruptedException {
+    public void validateItemInWishPresentEvenAfterLogoutAndLogin11() throws InterruptedException {
         driver = new ChromeDriver();
         driver.get("https://www.riverisland.com/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

@@ -15,7 +15,7 @@ public class ValidUserCanRemoveOneItem12 {
 
 
     @Test
-    public void validUserCanRemoveOneItem13 () throws InterruptedException {
+    public void validUserCanRemoveOneItem12 () throws InterruptedException {
         driver = new ChromeDriver();
 
         driver.get("https://www.riverisland.com/");

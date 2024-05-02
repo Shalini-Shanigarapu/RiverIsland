@@ -2,6 +2,7 @@ package com.wishlistModule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -32,10 +33,13 @@ public class ValidatedUserCanAccessThroughMyAccount10 {
         driver.findElement(By.cssSelector("[title='My account']")).click();
 
         driver.findElement(By.cssSelector("[title='Wishlist']")).click();
-        String expectedTitle = "Your Wishlist - River Island";
-        String actualTitle = driver.getTitle();
-        Assert.assertEquals(actualTitle, expectedTitle);
-        driver.quit();
+
+        WebElement expectedProductElement=driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
+        expectedProductElement.getText();
+        String expectedProductName=expectedProductElement.getText();
+        System.out.println(expectedProductName);
+
+        Assert.assertEquals(true,expectedProductElement.isDisplayed());
 
     }
 }

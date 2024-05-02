@@ -33,8 +33,7 @@ public class ValidateItemAddedInWishlist9 {
         Assert.assertEquals(actualTitle,expectedTitle);
 
 
-        //  no items-You currently have no item(s) in your wishlist.
-        //driver.quit();
+        driver.quit();
     }
 
 }

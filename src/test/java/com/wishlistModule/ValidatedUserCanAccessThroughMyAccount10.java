@@ -20,7 +20,6 @@ public class ValidatedUserCanAccessThroughMyAccount10 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         Thread.sleep(10000);
-
         driver.findElement(By.cssSelector("[name='accept-all']")).click();
         driver.findElement(By.cssSelector("[title='My account']")).click();
 

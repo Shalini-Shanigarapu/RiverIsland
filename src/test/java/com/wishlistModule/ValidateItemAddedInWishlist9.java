@@ -29,7 +29,6 @@ public class ValidateItemAddedInWishlist9 {
 
         driver.findElement(By.cssSelector("[title='Wishlist']")).click();
 
-
         WebElement expectedProductElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
         expectedProductElement.getText();
         String expectedProductName = expectedProductElement.getText();
@@ -37,12 +36,11 @@ public class ValidateItemAddedInWishlist9 {
         WebElement expectedPriceElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/following-sibling::div/div/span"));
         String expectedPrice = expectedPriceElement.getText();
 
-        System.out.println("After Product Name" + expectedProductName);
+        System.out.println("ActualProduct Name" + expectedProductName);
         System.out.println(expectedPrice);
 
         Assert.assertEquals(true, expectedProductElement.isDisplayed());
         Assert.assertEquals(true, expectedPriceElement.isDisplayed());
-
         driver.quit();
     }
 

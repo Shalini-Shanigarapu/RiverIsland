@@ -40,7 +40,6 @@ public class WishlistToEditorialPage8 {
         editorialProductType.click();
 
 
-
         WebElement editorialProduct = driver.findElement(By.xpath("//h6[normalize-space()='Grey Drape Cowl Neck Tank Top']"));
 
         act.scrollToElement(editorialProduct).build().perform();
@@ -61,6 +60,8 @@ public class WishlistToEditorialPage8 {
         String expectedProductName = expectedProductElement.getText();
         System.out.println("Before Product Name" + actualProductName);
         System.out.println("After Product Name" + expectedProductName);
+
+        // Assertions
 
         Assert.assertEquals(actualProductName, expectedProductName);
 

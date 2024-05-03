@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Rahul/Intellij/RiverIsland/src/test/java/com/wishlistModule">
+        <classes>
+
+            <class name="com.wishlistModule.ValidateWishlistWithNoItems1">
+                <methods>
+                    <include name="withNoItemInWishlistPage"/>
+                </methods>
+            </class>
+
+
+
+            <class name="com.wishlistModule.WishlistToWomenPage2">
+                <methods>
+                    <include name="womenPage"/>
+                </methods>
+            </class>
+
+            <class name="com.wishlistModule.WishlistToMenPage3">
+                <methods>
+                    <include name="menPage"/>
+                </methods>
+            </class>
+
+            <class name="com.wishlistModule.WishlistToGirlsPage4">
+                <methods>
+                    <include name="girlsPage"/>
+                </methods>
+            </class>
+
+            <class name="com.wishlistModule.WishlistToBoysPage5">
+                <methods>
+                    <include name="BoysPage"/>
+                </methods>
+            </class>
+
+            <class name="com.wishlistModule.WishlistToHolidayShop6">
+                <methods>
+                    <include name="holidayPage"/>
+                </methods>
+            </class>
+
+            <class name="com.wishlistModule.WishlistToJeansPage7">
+                <methods>
+                    <include name="jeansPage"/>
+                </methods>
+            </class>
+
+
+            <class name="com.wishlistModule.WishlistToEditorialPage8">
+                <methods>
+                    <include name="editorialPage"/>
+                </methods>
+            </class>
+
+
+            <class name="com.wishlistModule.ValidateItemAddedInWishlist9">
+                <methods>
+                    <include name="itemAddedPage"/>
+                </methods>
+            </class>
+
+
+
+            <class name="com.wishlistModule.ValidatedUserCanAccessThroughMyAccount10">
+                <methods>
+                    <include name="itemAddedPage"/>
+                </methods>
+            </class>
+
+
+
+            <class name="com.wishlistModule.ValidateItemInWishPresentEvenAfterLogoutAndLogin11">
+                <methods>
+                    <include name="validateItemInWishPresentEvenAfterLogoutAndLogin11"/>
+                </methods>
+            </class>
+
+
+
+            <class name="com.wishlistModule.ValidUserCanRemoveOneItem12">
+                <methods>
+                    <include name="validUserCanRemoveOneItem12"/>
+                </methods>
+            </class>
+
+
+            <class name="com.wishlistModule.ValidUserCanRemoveAllProductsFromWishlist13">
+                <methods>
+                    <include name="validUserCanRemoveAllProductsFromWishlist13"/>
+                </methods>
+            </class>
+
+
+        </classes>
+    </test>
+</suite>

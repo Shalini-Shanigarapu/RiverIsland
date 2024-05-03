@@ -40,16 +40,27 @@ public class WishlistToMenPage3 {
             act.scrollToElement(menProduct).build().perform();
             menProduct.click();
 
-            WebElement menWishlistBtn = driver.findElement(By.xpath("//button[@aria-label='Add to Wishlist']"));
+            WebElement actualProductElement = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+            String actualProductName = actualProductElement.getText();
+
+
+            WebElement menWishlistBtn = driver.findElement(By.xpath("//span[text()='Add to bag']/parent::span/parent::button/parent::div/following-sibling::button/*[name()='svg']"));
 
             act.scrollToElement(menWishlistBtn).build().perform();
             menWishlistBtn.click();
 
-            driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
-            String expectedTitle="Your Wishlist - River Island";
-            String actualTitle=driver.getTitle();
-            Assert.assertEquals(actualTitle,expectedTitle);
-            driver.quit();
+            WebElement wishlistPageBtn = driver.findElement(By.cssSelector("[title='Wishlist']"));
+            wishlistPageBtn.click();
 
+
+            WebElement expectedProductElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
+            expectedProductElement.getText();
+            String expectedProductName = expectedProductElement.getText();
+            System.out.println("Before Product Name" + actualProductName);
+            System.out.println("After Product Name" + expectedProductName);
+
+            Assert.assertEquals(actualProductName, expectedProductName);
+
+            driver.quit();
         }
 }

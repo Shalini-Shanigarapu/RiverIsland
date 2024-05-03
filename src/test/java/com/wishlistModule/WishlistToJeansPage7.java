@@ -47,15 +47,23 @@ public class WishlistToJeansPage7 {
         act.scrollToElement(jeansGirlProduct).build().perform();
         jeansGirlProduct.click();
 
+        WebElement actualProductElement = driver.findElement(By.xpath("//ol[@data-cs-override-id='breadcrumbs']/following-sibling::div/h1"));
+        String actualProductName = actualProductElement.getText();
 
         WebElement jeanGirlWishlistBtn = driver.findElement(By.xpath("//button[@aria-label='Add to Wishlist']"));
 
         act.scrollToElement(jeanGirlWishlistBtn).build().perform();
         jeanGirlWishlistBtn.click();
 
-        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();        String expectedTitle="Your Wishlist - River Island";
-        String actualTitle=driver.getTitle();
-        Assert.assertEquals(actualTitle,expectedTitle);
+        driver.findElement(By.cssSelector("[title='Wishlist']")).click();
+
+        WebElement expectedProductElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
+        expectedProductElement.getText();
+        String expectedProductName = expectedProductElement.getText();
+        System.out.println("Before Product Name" + actualProductName);
+        System.out.println("After Product Name" + expectedProductName);
+        Assert.assertEquals(actualProductName, expectedProductName);
+
         driver.quit();
     }
 

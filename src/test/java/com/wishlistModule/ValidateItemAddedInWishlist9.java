@@ -1,6 +1,7 @@
 package com.wishlistModule;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -26,13 +27,20 @@ public class ValidateItemAddedInWishlist9 {
         Thread.sleep(20000);
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
-        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
+        driver.findElement(By.cssSelector("[title='Wishlist']")).click();
 
-        String expectedTitle="Your Wishlist - River Island";
-        String actualTitle=driver.getTitle();
-        Assert.assertEquals(actualTitle,expectedTitle);
+        WebElement expectedProductElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
+        expectedProductElement.getText();
+        String expectedProductName = expectedProductElement.getText();
 
+        WebElement expectedPriceElement = driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/following-sibling::div/div/span"));
+        String expectedPrice = expectedPriceElement.getText();
 
+        System.out.println("ActualProduct Name" + expectedProductName);
+        System.out.println(expectedPrice);
+
+        Assert.assertEquals(true, expectedProductElement.isDisplayed());
+        Assert.assertEquals(true, expectedPriceElement.isDisplayed());
         driver.quit();
     }
 

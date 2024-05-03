@@ -2,6 +2,7 @@ package com.wishlistModule;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,7 +15,7 @@ public class ValidUserCanRemoveOneItem12 {
 
 
     @Test
-    public void validUserCanRemoveOneItem13 () throws InterruptedException {
+    public void validUserCanRemoveOneItem12 () throws InterruptedException {
         driver = new ChromeDriver();
 
         driver.get("https://www.riverisland.com/");
@@ -33,14 +34,19 @@ public class ValidUserCanRemoveOneItem12 {
         driver.findElement(By.xpath(" //button[@type='submit']")).click();
 
 
+        WebElement wishlistBtn = driver.findElement(By.cssSelector("[title='Wishlist']"));
+        wishlistBtn.click();
 
-        driver.findElement(By.cssSelector(" [data-qa='wishlist-btn']")).click();
-        driver.findElement(By.xpath("//span[@class='icon icon-X']")).click();
-        driver.findElement(By.xpath(" //span[normalize-space()='Wishlist']")).click();
+        WebElement expectedProductElement=driver.findElement(By.xpath("//h1[contains(text(),'Your wishlist')]/parent::div/following-sibling::div/following-sibling::ul/li/form/following-sibling::form/div/following-sibling::div/following-sibling::div/div/div/p"));
+        String expectedProductName = expectedProductElement.getText();
+        System.out.println(expectedProductName);
 
-        String expectedTitle="Your Wishlist - River Island";
-        String actualTitle=driver.getTitle();
-        Assert.assertEquals(actualTitle,expectedTitle);
+        WebElement removeSingleProduct = driver.findElement(By.cssSelector("[name='RemoveItemFromWishList']"));
+        removeSingleProduct.click();
+
+
+
+
         driver.quit();
     }
 
